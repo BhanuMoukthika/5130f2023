@@ -38,13 +38,7 @@ Key Features:
 
 The key features, such as personalized goal-setting, reliable data insights, an intuitive user interface, versatility in fitness activities, and community-focused elements, set this app apart. It aims to provide a comprehensive and enjoyable fitness experience for users of all backgrounds.
 
-Project Timeline:
 
-The project is structured into phases, each focusing on specific aspects of development, testing, and refinement. From initial design to the final preparations for the app launch, each phase is carefully planned to ensure a seamless and effective development process.
-
-Budget:
-
-While the detailed budget breakdown will be provided upon project approval, it is essential to acknowledge that the investment includes resources for development, design, testing, and marketing. This comprehensive approach ensures that the app not only functions well but is also introduced effectively to the target audience.
 
 Conclusion:
 
