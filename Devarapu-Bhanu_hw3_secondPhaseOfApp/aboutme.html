@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bhanu  Devarapu</title>
+    <style>
+        body {
+            font-family: Times, sans-serif;
+            background: linear-gradient(to top, rgba(80, 74, 74, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%), url(bg1.jpeg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        h1 {
+            color: #4437a35d;
+        }
+
+        img {
+            max-width: 17%;
+            border-radius: 50%;
+            float: right;
+        }
+
+
+        table {
+            border-collapse: collapse;
+            margin: 30px auto;
+            width: 90%;
+            margin-left: 30px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #b75858;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            background-color: #b4c8cb;
+        }
+
+        ul {
+            list-style-type: square;
+            text-align: left;
+        }
+
+        .c {
+            background-color: #f30404;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .b {
+            text-align: center;
+            color: rgb(34, 37, 37);
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animated-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            animation: fadeInLeft 1s ease-in-out;
+        }
+        
+        .animated-table tr {
+            animation: fadeInLeft 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="b">ABOUT ME</h1>
+    <img src="MY_IMAGE.jpeg" alt="Your Profile Picture" class="center">
+    <p>I am an inspired and passionate software engineer with a solid background in computer science and a talent for solving issues. 
+        I like to work on difficult projects that test the limits of technology, and I thrive in dynamic surroundings</p>
+    <br>
+    <h2 class="animated-list">Academic Project</h2>
+    <ul class="animated-list">
+        <li>Project Title: Online fraud detection system (Argo UML)</li>
+        <li>Project Title: Employee information system (SQL)</li>
+        <li>Project Title: Classification of phishing websites using ML Algorithms</li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <h2 class="animated-table">Academic Profile</h2>
+    <table class="animated-table">
+        <tr>
+            <th>Qualification</th>
+            <th>Institution</th>
+            <th>Percentage %/CGPA</th>
+        </tr>
+        <tr class="c">
+            <td>B. TECH(CSE)</td>
+            <td>Vignan's foundation for science, technology, and research University</td>
+            <td>7.79</td>
+        </tr>
+        <tr class="animated-table">
+            <td>INTERMEDIATE</td>
+            <td>SRI CHAITANYA JR COLLEGE</td>
+            <td>8.7</td>
+        </tr>
+        <tr class="animated-table">
+            <td>Schooling</td>
+            <td>Kennedy Public School</td>
+            <td>8.0</td>
+        </tr>
+    </table>
+    <h2 class="animated-list">Academic Skills</h2>
+    <ol >
+        <li value="1">Programming Languages</li>
+        <li>Web Development</li>
+        <li>Web Development</li>
+        <li>Software Development</li>
+    </ol>
+</body>
+</html>

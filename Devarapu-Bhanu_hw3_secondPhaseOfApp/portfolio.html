@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Pie Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <center>
+        <h1>Investment portfolio</h1>
+
+    <h1>My  Educational Expense Doughnut Chart</h1>
+    <canvas id="expenseChart" width="400" height="400"></canvas></center>
+
+    <script>
+        const expensesData = {
+            labels: ["Pre School", "Middel School", "High School", "Bachelor's", "Masters"],
+            datasets: [{
+                data: [100, 350, 500, 750, 1150],
+                backgroundColor: ["#FF5733", "#33FF57", "#5733FF", "#33FF99", "#FF33FF"]
+            }]
+        };
+
+        const ctx = document.getElementById("expenseChart").getContext("2d");
+
+        new Chart(ctx, {
+            type: "doughnut",
+            data: expensesData,
+            options: {
+                responsive: false,
+                maintainAspectRatio: false,
+            }
+        });
+    </script>
+</body>
+</html>
