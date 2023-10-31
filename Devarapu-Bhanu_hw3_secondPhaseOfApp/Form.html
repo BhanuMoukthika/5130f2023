@@ -5,7 +5,134 @@
     <title>User Information Form</title>
     <style>
         /* Style for the body element */
+        body {<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Information Form</title>
+    <style>
+        /* Style for the body element */
         body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            background-image: url('Bg1.jpeg');
+        }
+
+        /* Style for the form container */
+        #user-info-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #e6dfdf;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Style for the form labels */
+        label {
+            color: #b80c0c;
+            display: block;
+            margin-top: 13px;
+            font-weight: bold;
+        }
+
+        /* Style for text and textarea inputs */
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        /* Style for the "Upload CV" and "Upload Picture" labels */
+        .file-input-label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Style for the "Submit" button */
+        #submit-button {
+            background-color: #dbb4d1;
+            color: #5b7991;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        /* Style for the "Submit" button on hover */
+        #submit-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style for file input elements */
+        input[type="file"] {
+            display: none;
+        }
+
+        /* Style for file input labels on hover */
+        .file-input-label:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>User Information Form</h1>
+    </center>
+    <form id="user-info-form" method="POST" action="process_form.php">
+        <label for="Full-Name"> My Full Name :</label>
+        <input type="text" id="Full-Name" name="Full-Name">
+
+        <label for="My-EmailAddress">My Email Address:</label>
+        <input type="text" id="My-EmailAddress" name="My-EmailAddress">
+
+        <label for="Current-location">My Current Location:</label>
+        <input type="text" id="Current-location" name="Current-location" required>
+
+        <label for="Search-online">I am From:</label>
+        <input type="text" id="Search-online" name="Search-online">
+
+        <label for="Desired-location">I'd like to be in:</label>
+        <input type="text" id="Desired-location" name="Desired-location">
+
+        <label for="family-background">My Family is from:</label>
+        <input type="text" id="family-background" name="family-background">
+
+        <label for="My-Hobbies">My Hobbies:</label>
+        <input type="text" id="My-Hobbies" name="My-Hobbies">
+
+        <label for="current-residence">Where I Live Now:</label>
+        <input type="text" id="current-residence" name="current-residence">
+
+        <label for="desired-residence">Where I'd like to Live:</label>
+        <input type="text" id="desired-residence" name="desired-residence">
+
+        <label for="significant-other">The Place where my "significant other" was raised, born:</label>
+        <input type="text" id="significant-other" name="significant-other">
+
+        <label for="Facts-AboutMe">Facts About Me:</label>
+        <textarea id="Facts-AboutMe" name="Facts-AboutMe"></textarea>
+
+        <input type="file" id="cv-upload" name="cv-upload" accept=".pdf, .doc, .docx">
+        <label class="file-input-label" for="cv-upload">Upload CV</label>
+
+        <input type="file" id="picture-upload" name="picture-upload" accept="image/*">
+        <label class="file-input-label" for="picture-upload">Upload Picture</label>
+
+        <button type="submit" id="submit-button">Submit</button>
+    </form>
+</body>
+
+</html>
+
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             margin: 0;
