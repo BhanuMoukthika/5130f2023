@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Fitness App</title>
+</head>
+<body>
+
+  <header class="bg-dark text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4">Diet and Fitness Hub</h1>
+      <p class="lead">Your journey to a healthier lifestyle starts here. Discover the benefits of fitness and nutrition.</p>
+      <a class="btn btn-success btn-lg" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+      <a class="btn btn-primary btn-lg" href="#" data-toggle="modal" data-target="#signupModal">Sign Up</a>
+    </div>
+  </header>
+ 
+
+
+  <!-- Fitness Section with Background -->
+  <section id="fitness-bg" class="py-5 bg-secondary text-white">
+    <div class="container">
+      <h2 class="text-center mb-4">Fitness</h2>
+      <p class="text-center">Achieving and maintaining fitness involves a combination of regular exercise, a balanced diet, and healthy lifestyle choices. Here are some key factors:</p>
+      <ul>
+        <li><strong>Regular Exercise:</strong> Engage in a mix of cardiovascular, strength, and flexibility exercises.</li>
+        <li><strong>Healthy Diet:</strong> Consume a well-balanced diet rich in fruits, vegetables, lean proteins, and whole grains.</li>
+        <li><strong>Consistency:</strong> Stay consistent with your fitness routine to see long-term benefits.</li>
+        <li><strong>Rest and Recovery:</strong> Allow your body to recover with adequate rest and sleep.</li>
+      </ul>
+
+      <!-- Images Section -->
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/5_day_dumbbell_workout_-_1200x630.jpg?itok=wvEt4RRY" alt="Fitness Image 1" class="img-fluid fit-img">
+        </div>
+        <div class="col-md-4">
+          <img src="https://www.regymenfitness.com/wp-content/uploads/2021/12/Sportive-serious-people-liftin-1080x675.jpg" alt="Fitness Image 2" class="img-fluid fit-img">
+        </div>
+        <div class="col-md-4">
+          <img src="https://cdn.aarp.net/content/dam/aarp/health/healthy-living/2022/07/1140-man-woman-working-out.imgcache.rev.web.900.517.jpg" alt="Fitness Image 3" class="img-fluid fit-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diet Section with Background -->
+  <section id="diet-bg" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Diet</h2>
+      <p class="text-center">Maintaining a healthy diet is essential for overall well-being. Consider the following key factors:</p>
+      <ul>
+        <li><strong>Balanced Nutrition:</strong> Include a variety of nutrients, including proteins, carbohydrates, fats, vitamins, and minerals.</li>
+        <li><strong>Hydration:</strong> Drink an adequate amount of water throughout the day to stay hydrated.</li>
+        <li><strong>Portion Control:</strong> Be mindful of portion sizes to prevent overeating.</li>
+        <li><strong>Limit Processed Foods:</strong> Minimize the intake of processed and sugary foods.</li>
+      </ul>
+
+      <!-- Images Section -->
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <img src="https://c.ndtvimg.com/2020-09/bkj71ito_chicken-salad_625x300_05_September_20.jpg" alt="Diet Image 1" class="img-fluid diet-img">
+        </div>
+        <div class="col-md-4">
+          <img src="https://foremangrillrecipes.com/wp-content/uploads/2014/07/featured-healthy-grilled-chicken.jpg" alt="Diet Image 2" class="img-fluid diet-img">
+        </div>
+        <div class="col-md-4">
+          <img src="https://images-prod.healthline.com/hlcmsresource/images/AN_images/vegetarian-diet-plan-1296x728-feature.jpg" alt="Diet Image 3" class="img-fluid diet-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- About Section -->
+   <section id="about" class="py-5 bg-secondary text-white">
+    <div class="container">
+      <h2 class="text-center mb-4">About Us</h2>
+      <p class="text-center">
+        Welcome to Fitness Hub, where passion meets expertise in the realms of fitness and diet. As dedicated fitness and diet experts, our mission is to guide you on the path to a healthier and happier life.
+      </p>
+      <p class="text-center">
+        With years of experience in the health and wellness industry, we understand the intricate balance between exercise and nutrition. Our team of experts is committed to providing you with personalized advice, science-backed strategies, and the motivation you need to achieve your fitness and dietary goals.
+      </p>
+      <p class="text-center">
+        Whether you're looking to build muscle, shed those extra pounds, or simply adopt a healthier lifestyle, Fitness Hub is your trusted partner on this journey. Join us as we empower individuals to make informed choices, cultivate sustainable habits, and unlock their full potential.
+      </p>
+    </div>
+  </section>
+
+
+  <section id="contact" class="py-5 bg-light ">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <p class="text-center">Have questions or suggestions? Reach out to us at <a href="mailto:info@fitnesshub.com">info@fitnesshub.com</a></p>
+    </div>
+  </section>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Add your login form here -->
+          <form>
+            <div class="form-group">
+              <label for="loginUsername">Username</label>
+              <input type="text" class="form-control" id="loginUsername" required>
+            </div>
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <input type="password" class="form-control" id="loginPassword" required>
+            </div>
+            <button type="submit" class="btn btn-success">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Updated signup form with additional fields -->
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="signupFirstName">First Name</label>
+                <input type="text" class="form-control" id="signupFirstName" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="signupLastName">Last Name</label>
+                <input type="text" class="form-control" id="signupLastName" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="signupSex">Sex</label>
+              <select class="form-control" id="signupSex" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="signupDOB">Date of Birth</label>
+              <input type="date" class="form-control" id="signupDOB" required>
+            </div>
+            <div class="form-group">
+              <label for="signupAddress">Address</label>
+              <textarea class="form-control" id="signupAddress" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="signupEmail">Email</label>
+              <input type="email" class="form-control" id="signupEmail" required>
+            </div>
+            <div class="form-group">
+              <label for="signupPassword">Password</label>
+              <input type="password" class="form-control" id="signupPassword" required>
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" class="form-control" id="confirmPassword" required>
+            </div>
+            <button type="submit" class="btn btn-outline-dark">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
