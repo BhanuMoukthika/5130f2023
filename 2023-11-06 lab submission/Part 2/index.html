@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enrollment Form</title>
+
+
+  
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #e2e8f0; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            max-width: 450px;
+            width: 100%;
+        }
+
+        h2 {
+            color: #2a4365; /* Dark blue */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            color: #4a5568; /* Dark grey-blue */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"] {
+            width: calc(100% - 30px);
+            padding: 15px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            border: 2px solid #cbd5e0; /* Light grey */
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .inputFeedback {
+            color: #e53e3e; /* Red */
+            font-size: 0.9rem;
+            height: 1.5rem;
+            display: block;
+        }
+
+        .inputSuccess {
+            color: #38a169; /* Green */
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        #feedbackContainer {
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            display: none;
+        }
+
+        button {
+            background-color: #ce31af; /* Blue */
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1rem;
+        }
+
+        button:hover {
+            background-color: #2bb02d; 
+        }
+
+        button:active {
+            background-color: #010101; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Enrollment Form</h1>
+    <form id="enrollmentForm" action="/enroll" method="post">
+        <label for="userAlias">Alias:</label>
+        <input type="text" id="userAlias" name="userAlias" required>
+        <div class="inputFeedback" id="aliasFeedback"></div>
+        <br>
+
+        <label for="userEmail">Email:</label>
+        <input type="email" id="userEmail" name="userEmail" required>
+        <div class="inputFeedback" id="emailFeedback"></div>
+        <br>
+
+        <label for="userPhone">Phone Number:</label>
+        <input type="text" id="userPhone" name="userPhone" required>
+        <div class="inputFeedback" id="phoneFeedback"></div>
+        <br>
+
+        <label for="userWebsite">Website URL:</label>
+        <input type="url" id="userWebsite" name="userWebsite" required>
+        <div class="inputFeedback" id="websiteFeedback"></div>
+        <br>
+
+        <label for="userPass">Password:</label>
+        <input type="password" id="userPass" name="userPass" required>
+        <div class="inputFeedback" id="passwordFeedback"></div>
+        <br>
+
+        <label for="userConfirmPass">Confirm Password:</label>
+        <input type="password" id="userConfirmPass" name="userConfirmPass" required>
+        <div class="inputFeedback" id="confirmPasswordFeedback"></div>
+        <br>
+
+        <button type="submit">Enroll</button>
+    </form>
+
+    <div id="feedbackContainer"></div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const user = document.getElementById('username');
+            const email = document.getElementById('emailAddress');
+            const phone = document.getElementById('contactNumber');
+            const url = document.getElementById('siteURL');
+            const pass = document.getElementById('newPassword');
+            const confirmPass = document.getElementById('confirmPassword');
+
+            const userFeedback = document.getElementById('usernameFeedback');
+            const emailFeedback = document.getElementById('email Feedback');
+            const phoneFeedback = document.getElementById('phoneFeedback');
+            const urlFeedback = document.getElementById('urlFeedback');
+            const passFeedback = document.getElementById('passwordFeedback');
+            const confirmPassFeedback = document.getElementById('confirmPasswordFeedback');
+
+            let isFormValid = true;
+            let errorMessages = [];
+
+            // Validation patterns
+            const userPattern = /^[A-Za-z0-9_]+$/;
+            if (!user.value.match(userPattern)) {
+                userFeedback.textContent = 'Username contains invalid characters.';
+                errorMessages.push('Invalid username.');
+                isFormValid = false;
+            } else {
+                userFeedback.textContent = '';
+            }
+
+            const emailRegEx = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+            if (!email.value.match(emailRegEx)) {
+                emailFeedback.textContent = 'Email format is not correct.';
+                errorMessages.push('Invalid email format.');
+                isFormValid = false;
+            } else {
+                emailFeedback.textContent = '';
+            }
+
+            const phoneRegEx = /^(\d{3}-\d{3}-\d{4}|\(\d{3}\) \d{3}-\d{4}|\d{10}|\d{3} \d{3} \d{4})$/;
+            if (!phone.value.match(phoneRegEx)) {
+                phoneFeedback.textContent = 'Phone number format is not correct.';
+                errorMessages.push('Invalid phone format.');
+                isFormValid = false;
+            } else {
+                phoneFeedback.textContent = '';
+            }
+
+            const urlRegEx = /^(https?:\/\/)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/;
+            if (!url.value.match(urlRegEx)) {
+                urlFeedback.textContent = 'URL format is not correct.';
+                errorMessages.push('Invalid URL format.');
+                isFormValid = false;
+            } else {
+                urlFeedback.textContent = '';
+            }
+
+            const passwordRegEx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+            if (!pass.value.match(passwordRegEx)) {
+                passFeedback.textContent = 'Password does not meet the required criteria.';
+                errorMessages.push('Password criteria not met.');
+                isFormValid = false;
+            } else {
+                passFeedback.textContent = '';
+            }
+
+            if (pass.value !== confirmPass.value) {
+                confirmPassFeedback.textContent = 'Passwords do not match.';
+                errorMessages.push('Passwords mismatch.');
+                isFormValid = false;
+            } else {
+                confirmPassFeedback.textContent = '';
+            }
+
+            const feedbackContainer = document.getElementById('feedbackContainer');
+            if (!isFormValid) {
+                feedbackContainer.style.display = 'block';
+                feedbackContainer.innerHTML = `<div class="inputFeedback">Please resolve the following issues:<ul>${errorMessages.map(msg => `<li>${msg}</li>`).join('')}</ul></div>`;
+            } else {
+                feedbackContainer.style.display = 'block';
+                feedbackContainer.innerHTML = '<div class="inputSuccess">Registration Successful!</div>';
+            }
+        });
+    </script>
+</body>
+</html>
+
+
