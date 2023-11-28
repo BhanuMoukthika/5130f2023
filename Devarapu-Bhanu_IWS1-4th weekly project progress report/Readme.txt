@@ -5,7 +5,7 @@ Bhanu_Devarapu@student.uml.edu
 
 Last   we did the user authentication and validated in Local terminal via Node.js. Initially, installed all the required packages like  bcrypt, mysql, jsonwebtokens. Secondly, running XAMPP( Apache server and SQL).
 
- his week, when a user successfully logs in, a dashboard screen stating "welcome,Bhanu moukthika!" is displayed. Next, we developed buttons for user profiles, fitness videos, workout plans, and diet plans on a navigation bar we called Menue.Prior to evaluating every button, we collect user data such as gender, age, height, and asking about their goals: Weight gain or Weight loss. So, when a user fills all these attributes and depending on his goal, the plan gets started. Therefore, he/she can view the goal related workout videos and diet plans and also workout plans too. But, this week only user can see the form and fill their details, In coming week, all other buttons and funtionalities will work.
+ This week, when a user successfully logs in, a dashboard screen stating "welcome,Bhanu moukthika!" is displayed. Next, we developed buttons for user profiles, fitness videos, workout plans, and diet plans on a navigation bar we called Menue.Prior to evaluating every button, we collect user data such as gender, age, height, and asking about their goals: Weight gain or Weight loss. So, when a user fills all these attributes and depending on his goal, the plan gets started. Therefore, he/she can view the goal related workout videos and diet plans and also workout plans too. But, this week only user can see the form and fill their details, In coming week, all other buttons and funtionalities will work.
  
  
  Note: I have attached a successful snapshot.
