@@ -1,0 +1,4 @@
+npm init -y 
+npm i express mysql dotenv hbs nodemon 
+npm i bcryptjs
+npm i jsonwebtoken
