@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
+    <style>
+        .logout{
+            color:white;
+            outline: none;
+        }
+        .rounded-circle {
+          border-radius: 50%;
+        }
+        .modal-video iframe {
+          width: 100%;
+          height: 100%;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a class="navbar-brand" href="#">Diet and Fitness</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="/dashboard">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#profileModal">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/workout">Workouts</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/diet">Diet</a>
+              </li>
+            </ul>
+            <form class="mt-2 mt-md-0">
+                <a class="nav-link logout" href="/auth/logout">Logout</a></button>
+            </form>
+          </div>
+        </nav>
+      </header>
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-12 col-md-10 mx-auto">
+            <h1 class="fw-light">Diet</h1>
+            <p class="lead text-body-secondary">
+              A well-structured diet accommodates individual needs based on factors such as age, gender, activity level, 
+              and health goals. It promotes sustained energy levels, enabling individuals to tackle daily challenges with vitality. 
+              Incorporating a variety of foods ensures a diverse nutrient intake, supporting various bodily functions and enhancing overall 
+              resilience. Moreover, mindful eating practices foster a healthy relationship with food, encouraging conscious choices
+               and reducing the likelihood of overconsumption. Personalized dietary plans, designed with consideration to cultural preferences 
+               and dietary restrictions, contribute to long-term adherence and success. Embracing a nutritious and balanced diet is not
+                merely a short-term endeavor but a sustainable lifestyle choice that empowers individuals to thrive in their pursuit of wellness.
+            </p>
+            
+          </div>
+        </div>
+
+      </section>
+      <!-- Vegan Section -->
+<div class="container mx-auto text-center">
+   <h1 class="fw-light">Vegan</h1><br><br>
+  <div class="row">
+    <!-- Vegan Recipe 1 -->
+    <div class="col-lg-4">
+      <img src="https://bitly.ws/34jtK" alt="Avocado Toast" class="bd-placeholder-img rounded-circle" width="140" height="140">
+      <h2 class="fw-normal">Avocado Toast</h2>
+      <p>Ingredients: Avocado, Whole Grain Bread, Cherry Tomatoes, Olive Oil, Salt, Pepper
+        Calories: 300 calories</p>
+      <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;" data-video-id="0R5km8AQGlI?si=fwc7HQGuTXpsEWfd">View »</a></p>
+    </div>
+
+    <!-- Vegan Recipe 2 -->
+    <div class="col-lg-4">
+      <img src="https://bitly.ws/34jtB" alt="Quinoa Salad" class="bd-placeholder-img rounded-circle" width="140" height="140">
+      <h2 class="fw-normal">Quinoa Salad</h2>
+      <p>Ingredients: Quinoa, Chickpeas, Cucumber, Cherry Tomatoes, Red Onion, Lemon Vinaigrette
+        Calories: 350 calories</p>
+      <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;" data-video-id="pcH3isHdOzA?si=TwYigyFeP1AXGLiH">View »</a></p>
+    </div>
+
+    <!-- Vegan Recipe 3 -->
+    <div class="col-lg-4">
+      <img src="https://bitly.ws/34jtr" alt="Roasted Vegetable Wrap" class="bd-placeholder-img rounded-circle" width="140" height="140">
+      <h2 class="fw-normal">Vegetable Wrap</h2>
+      <p>Ingredients: Mixed Vegetables, Whole Wheat Wrap, Hummus, Balsamic Glaze
+        Calories: 280 calories</p>
+      <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;" data-video-id="_-HRWhlkh2U?si=bxRf_7wzBGTX3ze5">View »</a></p>
+    </div>
+
+    <!-- Vegan Recipe 4 -->
+    <div class="col-lg-4">
+      <img src="https://bitly.ws/34jtf" alt="Stuffed Bell Peppers" class="bd-placeholder-img rounded-circle" width="140" height="140">
+      <h2 class="fw-normal">Stuffed Bell Peppers</h2>
+      <p>Ingredients: Bell Peppers, Quinoa, Black Beans, Corn, Salsa, Vegan Cheese
+        Calories: 320 calories</p>
+      <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;" data-video-id="ektsiKFVqks?si=lQKs0OJT8McjD5l6">View »</a></p>
+    </div>
+
+    <!-- Vegan Recipe 5 -->
+    <div class="col-lg-4">
+      <img src="https://bitly.ws/34juh" alt="Chickpea Curry" class="bd-placeholder-img rounded-circle" width="140" height="140">
+      <h2 class="fw-normal">Chickpea Curry</h2>
+      <p>Ingredients: Chickpeas, Coconut Milk, Tomatoes, Onion, Garlic, Curry Spices
+        Calories: 280 calories</p>
+      <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;"data-video-id="5bsvxIDkm4g?si=bTZqCFvktoqID3Lj">View »</a></p>
+    </div>
+
+    <!-- Vegan Recipe 6 -->
+    <div class="col-lg-4">
+      <img src="https://bitly.ws/34jsW" alt="Potato Buddha Bowl" class="bd-placeholder-img rounded-circle" width="140" height="140">
+      <h2 class="fw-normal">Potato Buddha Bowl</h2>
+      <p>Ingredients: Sweet Potatoes, Quinoa, Kale, Avocado, Tahini Dressing
+        Calories: 300 calories</p>
+      <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;" data-video-id="agMMtecXnb8?si=OcovBcK9SYVcFmlT">View »</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- Salad Section -->
+<div class="container mx-auto text-center">
+   <br><br><h1 class="fw-light">Salads</h1><br><br>
+  <div class="row">
+    <!-- Salad Recipe 1 -->
+    <div class="col-lg-4">
+      <img src="https://bitly.ws/34jss" alt="Greek Salad" class="bd-placeholder-img rounded-circle" width="140" height="140">
+      <h2 class="fw-normal">Greek Salad</h2>
+      <p>Ingredients: Cucumber, Cherry Tomatoes, Feta Cheese, Kalamata Olives, Red Onion, Greek Dressing
+        Calories: 320 calories</p>
+      <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;"  data-video-id="kwq4vl610iY?si=iqOqdvEtIqMtJ3Wm">View »</a></p>
+    </div>
+
+    <!-- Salad Recipe 2 -->
+    <div class="col-lg-4">
+      <img src="https://bitly.ws/34jsc" alt="Caesar Salad" class="bd-placeholder-img rounded-circle" width="140" height="140">
+      <h2 class="fw-normal">Caesar Salad</h2>
+      <p>Ingredients: Romaine Lettuce, Croutons, Parmesan Cheese, Caesar Dressing
+        Calories: 280 calories</p>
+      <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;"  data-video-id="H3ZfEPiX_qc?si=HJrPs-nAgDLnAK0b">View »</a></p>
+    </div>
+
+    <!-- Salad Recipe 3 -->
+    <div class="col-lg-4">
+      <img src="https://bitly.ws/34js2" alt="Caprese Salad" class="bd-placeholder-img rounded-circle" width="140" height="140">
+      <h2 class="fw-normal">Caprese Salad</h2>
+      <p>Ingredients: Tomatoes, Fresh Mozzarella, Basil, Balsamic Glaze
+        Calories: 250 calories</p>
+      <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;" data-video-id="V4Cv_hVwT00?si=WqXw3ehwbzDo2_4p">View »</a></p>
+    </div>
+
+    <!-- Salad Recipe 4 -->
+<div class="col-lg-4">
+  <img src="https://bitly.ws/34jrQ" alt="Mango Avocado Salad" class="bd-placeholder-img rounded-circle" width="140" height="140">
+  <h2 class="fw-normal">Mango Avocado Salad</h2>
+  <p>Ingredients: Mixed Greens, Mango, Avocado, Red Onion, Pepitas, Lime Vinaigrette
+    Calories: 290 calories</p>
+  <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;" data-video-id="CbCwuBFheic?si=w-jAk1SHLGnKIFOy">View »</a></p>
+</div>
+
+<!-- Salad Recipe 5 -->
+<div class="col-lg-4">
+  <img src="https://bitly.ws/34jrA" alt="Berry Spinach Salad" class="bd-placeholder-img rounded-circle" width="140" height="140">
+  <h2 class="fw-normal">Berry Spinach Salad</h2>
+  <p>Ingredients: Baby Spinach, Mixed Berries, Goat Cheese, Walnuts, Balsamic Dressing
+    Calories: 280 calories</p>
+  <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;" data-video-id="DR7v2hk3PGY?si=0Ufp1VteDKrmHErN">View »</a></p>
+</div>
+
+<!-- Salad Recipe 6 -->
+<div class="col-lg-4">
+  <img src="https://bitly.ws/34jrq" alt="Asian Sesame Noodle Salad" class="bd-placeholder-img rounded-circle" width="140" height="140">
+  <h2 class="fw-normal">Sesame Noodle Salad</h2>
+  <p>Ingredients: Rice Noodles, Edamame, Red Bell Pepper, Cucumber, Sesame Soy Dressing
+    Calories: 320 calories</p>
+  <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;" data-video-id="vT_YM2Y1k_k?si=3Kk55eb9-e6c0Lvd">View »</a></p>
+</div>
+
+  </div>
+</div>
+
+<!-- High Protein Meals Section -->
+<div class="container mx-auto text-center">
+  <br><br><h1 class="fw-light">High Protein Meals</h1><br><br>
+  <div class="row">
+    <!-- High Protein Meal 1 -->
+    <div class="col-lg-4">
+      <img src="https://bitly.ws/34jpt" alt="Chicken Quinoa Bowl" class="bd-placeholder-img rounded-circle" width="140" height="140">
+      <h2 class="fw-normal">Chicken Quinoa Bowl</h2>
+      <p>Ingredients: Grilled Chicken, Quinoa, Broccoli, Almonds, Teriyaki Sauce
+        Calories: 380 calories</p>
+      <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal"style="color: white; text-decoration: none;"  data-video-id="CtXyqsKeDr0?si=oYzhjgW3xYJ_2V4Z">View »</a></p>
+    </div>
+
+    <!-- High Protein Meal 2 -->
+    <div class="col-lg-4">
+      <img src="https://bitly.ws/34jpI" alt="Salmon Quinoa Bowl" class="bd-placeholder-img rounded-circle" width="140" height="140">
+      <h2 class="fw-normal">Salmon Quinoa Bowl</h2>
+      <p>Ingredients: Salmon, Quinoa, Broccoli, Lemon, Soy Sauce
+        Calories: 350 calories</p>
+      <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;" data-video-id="T_YMtzKd9BE?si=pJSa3_C25230tmrZ">View »</a></p>
+    </div>
+
+    <!-- High Protein Meal 3 -->
+    <div class="col-lg-4">
+      <img src="https://bitly.ws/34jpZ" alt="Vegetarian Protein Bowl" class="bd-placeholder-img rounded-circle" width="140" height="140">
+      <h2 class="fw-normal">Vegetarian Protein Bowl</h2>
+      <p>Ingredients: Tofu, Brown Rice, Black Beans, Corn, Avocado
+        Calories: 320 calories</p>
+      <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;" data-video-id="n-Aielqdy-s?si=eNPgxBl178K5HQQf">View »</a></p>
+    </div>
+
+    <!-- High Protein Meal 4 -->
+    <div class="col-lg-4">
+      <img src="https://bitly.ws/34jqi" alt="Beef and Broccoli Stir-Fry" class="bd-placeholder-img rounded-circle" width="140" height="140">
+      <h2 class="fw-normal">Beef and Broccoli Stir-Fry</h2>
+      <p>Ingredients: Beef Strips, Broccoli, Soy Sauce, Garlic, Ginger
+      Calories: 400 calories</p>
+      <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;" data-video-id="aDUHfvAHAo8?si=Q3_iRN_vVa3atmp2">View »</a></p>
+    </div>
+
+    <!-- High Protein Meal 5 -->
+    <div class="col-lg-4">
+      <img src="https://bitly.ws/34jqx" alt="Egg and Spinach Omelette" class="bd-placeholder-img rounded-circle" width="140" height="140">
+      <h2 class="fw-normal">Egg and Spinach Omelette</h2>
+      <p>Ingredients: Eggs, Spinach, Feta Cheese, Bell Peppers
+      Calories: 330 calories</p>
+      <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;" data-video-id="0KgwThTF93A?si=BFOGdcLk9xzgClcD">View »</a></p>
+    </div>
+
+    <!-- High Protein Meal 6 -->
+    <div class="col-lg-4">
+      <img src="https://bitly.ws/34jqP" alt="Lentil and Chickpea Stew" class="bd-placeholder-img rounded-circle" width="140" height="140">
+      <h2 class="fw-normal">Lentil and Chickpea Stew</h2>
+      <p>Ingredients: Lentils, Chickpeas, Tomatoes, Carrots, Vegetable Broth
+      Calories: 310 calories</p>
+      <p><a class="btn btn-secondary view-btn" data-toggle="modal" data-target="#videoModal" style="color: white; text-decoration: none;" data-video-id="TJbB4XVK790?si=Hs-J_GvJSBLxHLvJ">View »</a></p>
+    </div>
+  </div>
+</div>
+
+      <!-- Video Modal -->
+      <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="videoModalLabel">Workout Video</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Dynamic YouTube video embed code -->
+              <iframe id="videoIframe" width="765" height="350" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- User Profile Section -->
+<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profileModalLabel">User Profile</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- User Profile Display -->
+                <div class="profile-item">
+                    <strong>First Name:</strong>
+                    <span id="profileFirstName">{{user.first_name}}</span>
+                </div>
+                <div class="profile-item">
+                    <strong>Last Name:</strong>
+                    <span id="profileLastName">{{user.last_name}}</span>
+                </div>
+                <div class="profile-item">
+                    <strong>Sex:</strong>
+                    <span id="profileSex">{{user.sex}}</span>
+                </div>
+                <div class="profile-item">
+                    <strong>Date of Birth:</strong>
+                    <span id="profileDOB">{{user.date_of_birth}}</span>
+                </div>
+                <div class="profile-item">
+                    <strong>Address:</strong>
+                    <span id="profileAddress">{{user.address}}</span>
+                </div>
+                <div class="profile-item">
+                    <strong>Email:</strong>
+                    <span id="profileEmail">{{user.email}}</span>
+                </div>
+                <!-- Add more profile fields as needed -->
+            </div>
+        </div>
+    </div>
+</div>
+      <section id="contact" class="py-5 bg-light ">
+        <div class="container">
+          <h2 class="text-center mb-4">Contact Us</h2>
+          <p class="text-center">Have questions or suggestions? Reach out to us at <a href="mailto:info@fitnesshub.com">info@fitnesshub.com</a></p>
+        </div>
+      </section>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script>
+        // JavaScript to update the video source when the modal is shown
+        $(document).ready(function () {
+          $('.view-btn').on('click', function () {
+            var videoId = $(this).data('video-id');
+            var videoUrl = 'https://www.youtube.com/embed/' + videoId;
+            $('#videoIframe').attr('src', videoUrl);
+          });
+      
+          // JavaScript to stop the video when the modal is closed
+          $('#videoModal').on('hide.bs.modal', function () {
+            $('#videoIframe').attr('src', ''); // Clear the iframe src attribute
+          });
+        });
+      </script>
+
+    </body>
