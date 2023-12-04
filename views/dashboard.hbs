@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
+    <style>
+        .logout{
+            color:white;
+            outline: none;
+        }
+        img{
+            width:1600px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a class="navbar-brand" href="#">Diet and Fitness</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/dashboard">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#profileModal">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/workout">Workouts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/diet">Diet</a>
+              </li>
+            </ul>
+            <form class="mt-2 mt-md-0">
+                <a class="nav-link logout" href="/auth/logout">Logout</a></button>
+            </form>
+          </div>
+        </nav>
+      </header>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+          <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img class="first-slide" src="https://images.wallpaperscraft.com/image/single/girl_dumbbells_fitness_221141_1600x900.jpg" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>Fitness</h1>
+                <p>Revitalize your fitness routine with our app's dynamic approach. Tailored workout plans, expert tips, and motivational content empower you to achieve your fitness aspirations. Whether you're sculpting muscles, enhancing flexibility, or embracing cardiovascular health, our comprehensive fitness support propels you toward enduring well-being. Unlock your potential and thrive in a healthier, stronger, and more energized version of yourself.</p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide" src="https://images.wallpaperscraft.com/image/single/salad_vegetables_eggs_114547_1280x800.jpg" alt="Second slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Diet</h1>
+                <p>Embark on a transformative dietary journey with our app. We offer a personalized approach to nutrition, emphasizing a balanced intake of proteins, carbohydrates, and fats. Discover a diverse range of recipes, from wholesome meals to delicious snacks, designed to nourish your body. Our expert guidance ensures that your dietary choices align with your health and wellness goals, promoting sustainable habits and overall vitality.</p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active">
+            <img class="third-slide" src="https://images.wallpaperscraft.com/image/single/dumbbells_fitness_gym_113149_1600x900.jpg">
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1>Welcome!&nbsp;{{user.first_name}} </h1>
+                <p>we are dedicated to helping you achieve your health and fitness goals. Whether you're a seasoned fitness enthusiast or just starting your wellness journey, our app is designed to empower you every step of the way.</p>
+                <p><a class="btn btn-lg btn-primary"  role="button" data-toggle="modal" data-target="#calculatorModal" id="getstarted">Get Started</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div id="results" class="mt-3"></div>
+      
+      <div class="p-5 mb-4 bg-body-tertiary rounded-2 bg-light">
+        <div class="container-fluid py-3">
+          <h1 class="display-5 fw-bold">Fitness</h1>
+          <p>Achieving and maintaining fitness involves a combination of regular exercise, a balanced diet, and healthy lifestyle choices. Here are some key factors:</p>
+        <ul>
+            <li><strong>Regular Exercise:</strong> Engage in a mix of cardiovascular, strength, and flexibility exercises.</li>
+            <li><strong>Healthy Diet:</strong> Consume a well-balanced diet rich in fruits, vegetables, lean proteins, and whole grains.</li>
+            <li><strong>Consistency:</strong> Stay consistent with your fitness routine to see long-term benefits.</li>
+            <li><strong>Rest and Recovery:</strong> Allow your body to recover with adequate rest and sleep.</li>
+        </ul>
+          <button class="btn btn-primary btn-lg" type="button">
+            <a href="/workout" style="color: white; text-decoration: none;">View workouts</a>
+          </button>
+
+        </div>
+      </div>
+      <div class="p-5 mb-4 bg-body-tertiary rounded-2">
+        <div class="container-fluid py-3">
+          <h1 class="display-5 fw-bold">Diet</h1>
+          <p>Maintaining a healthy diet is essential for overall well-being. Consider the following key factors:</p>
+            <ul>
+                <li><strong>Balanced Nutrition:</strong> Include a variety of nutrients, including proteins, carbohydrates, fats, vitamins, and minerals.</li>
+                <li><strong>Hydration:</strong> Drink an adequate amount of water throughout the day to stay hydrated.</li>
+                <li><strong>Portion Control:</strong> Be mindful of portion sizes to prevent overeating.</li>
+                <li><strong>Limit Processed Foods:</strong> Minimize the intake of processed and sugary foods.</li>
+            </ul>
+         <button class="btn btn-primary btn-lg" type="button">
+            <a href="/diet" style="color: white; text-decoration: none;">View Diet</a>
+          </button>
+
+        </div>
+      </div>
+      <section id="contact" class="py-5 bg-light ">
+        <div class="container">
+          <h2 class="text-center mb-4">Contact Us</h2>
+          <p class="text-center">Have questions or suggestions? Reach out to us at <a href="mailto:info@fitnesshub.com">info@fitnesshub.com</a></p>
+        </div>
+      </section>
+      <div class="modal fade" id="calculatorModal" tabindex="-1" role="dialog" aria-labelledby="calculatorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="calculatorModalLabel">BMI and BMR Calculator</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Calculator Form -->
+          <form id="calculatorForm">
+                <!-- Inside your form -->
+                <input type="hidden" id="user_id" name="user_id" value="{{user.user_id}}">
+
+                <div class="form-group">
+                    <label for="weight">Weight (kg)</label>
+                    <input type="number" class="form-control" id="weight" name="weight" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="heightFeet">Height (feet)</label>
+                        <input type="number" class="form-control" id="heightFeet" name="heightFeet" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="heightInches">Height (inches)</label>
+                        <input type="number" class="form-control" id="heightInches" name="heightInches" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age (years)</label>
+                    <input type="number" class="form-control" id="age" name="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select class="form-control" id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="program">Program</label>
+                    <select class="form-control" id="program" name="program" required>
+                        <option value="weightLoss">Weight Loss</option>
+                        <option value="weightGain">Weight Gain</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="submitCalculatorForm()">Calculate</button>
+            </form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- User Profile Section -->
+<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profileModalLabel">User Profile</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- User Profile Display -->
+                <div class="profile-item">
+                    <strong>First Name:</strong>
+                    <span id="profileFirstName">{{user.first_name}}</span>
+                </div>
+                <div class="profile-item">
+                    <strong>Last Name:</strong>
+                    <span id="profileLastName">{{user.last_name}}</span>
+                </div>
+                <div class="profile-item">
+                    <strong>Sex:</strong>
+                    <span id="profileSex">{{user.sex}}</span>
+                </div>
+                <div class="profile-item">
+                    <strong>Date of Birth:</strong>
+                    <span id="profileDOB">{{user.date_of_birth}}</span>
+                </div>
+                <div class="profile-item">
+                    <strong>Address:</strong>
+                    <span id="profileAddress">{{user.address}}</span>
+                </div>
+                <div class="profile-item">
+                    <strong>Email:</strong>
+                    <span id="profileEmail">{{user.email}}</span>
+                </div>
+                <!-- Add more profile fields as needed -->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+  const bmr="{{user.bmr}}";
+  if(bmr!=0){
+    document.getElementById('results').innerHTML = `
+            <div class="p-5 mb-4 bg-body-tertiary rounded-2 bg-light">
+            <div class="container-fluid py-3">
+              <h1 class="display-5 fw-bold">
+                Your Results
+                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#calculatorModal">
+                  <i class="fas fa-pencil-alt text-dark"></i>
+                </button>
+              </h1>
+              <h4 class="lead">BMI: {{user.bmi}}</h4>
+              <h4 class="lead">BMR: {{user.bmr}} calories/day</h4>
+              <h4 class="lead">Maintenance Calories: {{user.maintenance_calories}} calories/day for your program</h4>
+              <hr class="my-4">
+              <h5 class="mb-4">Stay Motivated!</h5>
+              <h4 class="lead">Your journey to a healthier you has just begun. Consistency is the key to success. Keep pushing yourself, and you'll achieve your fitness goals.</h4>
+            </div>
+          </div>`;
+      document.getElementById('getstarted').style.display = 'none';
+  }
+  async function submitCalculatorForm() {
+    // Perform any additional validation if needed
+    //calculateBMIandBMR();
+
+    // Get form data
+    const formData = new FormData(document.getElementById('calculatorForm'));
+    const data = {};
+
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+
+    try {
+      const response = await fetch('/auth/bmr', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const responseData = await response.json();
+      console.log(responseData); // Handle the response data as needed
+      document.getElementById('results').innerHTML = `
+            <div class="p-5 mb-4 bg-body-tertiary rounded-2 bg-light">
+            <div class="container-fluid py-3">
+              <h1 class="display-5 fw-bold">
+                Your Results
+                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#calculatorModal">
+                  <i class="fas fa-pencil-alt text-dark"></i>
+                </button>
+              </h1>
+              <h4 class="lead">BMI: ${responseData.bmi}</h4>
+              <h4 class="lead">BMR: ${responseData.bmr} calories/day</h4>
+              <h4 class="lead">Maintenance Calories: ${responseData.maintenanceCalories} calories/day for your program</h4>
+              <hr class="my-4">
+              <h5 class="mb-4">Stay Motivated!</h5>
+              <h4 class="lead">Your journey to a healthier you has just begun. Consistency is the key to success. Keep pushing yourself, and you'll achieve your fitness goals.</h4>
+            </div>
+          </div>`;
+
+      // Hide the modal
+      $('#calculatorModal').modal('hide');
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
+</script>
+
+
+    
+
+</body>
+</html>

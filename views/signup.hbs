@@ -1,0 +1,72 @@
+<!-- signup.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="/script.js"></script>
+  <title>Sign Up</title>
+</head>
+<body>
+
+  <header class="bg-dark text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4">Diet and Fitness Hub</h1>
+      <p class="lead">Create an account to start your fitness journey.</p>
+    </div>
+  </header>
+
+  <div class="container mt-4">
+    <form action="/auth/signup" method="POST">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="signupFirstName">First Name</label>
+          <input type="text" class="form-control" id="signupFirstName" name="signupFirstName" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="signupLastName">Last Name</label>
+          <input type="text" class="form-control" id="signupLastName" name="signupLastName" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="signupSex">Sex</label>
+        <select class="form-control" id="signupSex" name="signupSex" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="signupDOB">Date of Birth</label>
+        <input type="date" class="form-control" id="signupDOB" name="signupDOB" required>
+      </div>
+      <div class="form-group">
+        <label for="signupAddress">Address</label>
+        <textarea class="form-control" id="signupAddress" name="signupAddress" rows="3" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="signupEmail">Email</label>
+        <input type="email" class="form-control" id="signupEmail" name="signupEmail" required>
+      </div>
+      <div class="form-group">
+        <label for="signupPassword">Password(Must contain atleast 1 uppercase letter, number and special character)</label>
+        <input type="password" class="form-control" id="signupPassword" name="signupPassword" required>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+      {{#if message}}
+        <h6 class="alert alert-danger mt-4">{{message}}</h6>
+      {{/if}}
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
